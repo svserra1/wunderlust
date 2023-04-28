@@ -1,0 +1,769 @@
+/* Samuel Serrano */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------CSS Starts Here----------*/
+
+/*---Colors and Fonts---*/
+
+:root{
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+h1, h2, h3 {
+    font-family: 'Molle', cursive;
+}
+
+h4, p, q, small, nav, button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:wght@400;700&display=swap');
+
+/*---Colors and Fonts end---*/
+
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+body {
+    line-height: 1.5;
+}
+
+header {
+    background-image: linear-gradient(var(--teal), var(--white));
+}
+
+nav ul li a {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+header a.active,a:hover {
+    background-color: var(--yellow);
+}
+
+#plan {
+    background-color: var(--yellow);
+}
+
+#plan section {
+    background-color: var(--teal);
+    border: 2px solid var(--white);
+    border-radius: 10px;
+}
+
+#about {
+    background-color: var(--blue);
+}
+
+#about h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.form-required {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+input[type=radio] {
+    border: solid 4px var(--purple);
+    width: 100%;
+    height: 3em;
+}
+
+input[type="radio"]
+
+input[type="radio"]:checked {
+    accent-color: var(--purple);
+    }
+    
+#mySubmit {
+    text-align: center;
+    width: 90%;
+    margin: 20px;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: var(--purple);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+}
+
+#destination {
+    text-align: start;
+    width: 200px;
+    margin: 20px;
+    margin-top: 15px;
+    padding: 15px;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid var(--purple);
+    text-transform: uppercase;
+}
+
+#travelTime {
+    text-align:start;
+    width: 200px;
+    margin: 20px;
+    margin-top: 15px;
+    padding: 15px;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid var(--purple);
+    text-transform: uppercase;
+}
+
+
+fieldset legend {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+form label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#fName {
+    border: 2px solid var(--purple);
+}
+
+#lName {
+    border: 2px solid var(--purple);
+}
+
+.required {
+    color: var(--purple);
+}
+
+input[type=radio]:checked {
+    accent-color: var(--purple);
+}
+
+#email {
+    border: 2px solid var(--purple);
+}
+
+#phone {
+    border: 2px solid var(--purple);
+}
+
+#selects {
+    appearance: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    /*----------MENU-----------*/
+    #menu-toggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;  
+    z-index: 1;  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+        user-select: none;
+    }
+
+    #menu-toggle a {
+    text-decoration: none;
+    color: var(--black);
+    background-color: var(--teal);
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    }
+
+    #menu-toggle a:hover {
+    color: var(--yellow)
+    }
+
+    #menu-toggle input {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -7px;
+    left: -5px;  
+    padding: 0;
+    cursor: pointer;  
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+    }
+
+    #menu-toggle label {
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: var(--yellow);
+        padding: 10px 90px 0px 80px;
+        top: -270;
+        right: 60px;
+    }
+    #menu-toggle label span {
+    display: inline;
+    }
+
+    #menu-toggle label div {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 6px;
+    position: relative;
+    background: var(--dark-gray);
+    border-radius: 3px;  
+    z-index: 1;  
+    -webkit-transform-origin: 4px 0px;  
+        -ms-transform-origin: 4px 0px;  
+            transform-origin: 4px 0px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    }
+
+    #menu-toggle label div:first-child {
+    -webkit-transform-origin: 0% 100%;
+        -ms-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    }
+
+    #menu-toggle label div:nth-child(2) {
+        -webkit-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    }
+
+    #menu-toggle input:checked + label div {
+    background: var(--dark-gray);
+    }
+
+    ul {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    background: var(--teal);
+    list-style-type: none;
+    /* Hide the menu off-screen to the left */
+    top: -125px;
+    left: -110%;
+    -webkit-transition: right 0.3s ease;
+    -o-transition: right 0.3s ease;
+    transition: right 0.3s ease; 
+    padding-left: 230px;
+    }
+
+    ul li {
+    border: 1px solid var(--black);
+    margin-left: -235px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-weight: bolder;
+    }
+
+    #menu-toggle input:checked ~ ul {
+    right: 0;
+    }
+
+    #menu-toggle label {
+        background-color: var(--yellow);
+        padding: 100px;
+        position: absolute;
+        visibility: visible;
+    }
+
+     /*---End of Menu---*/
+
+    nav {
+        position: absolute;
+    }
+
+    nav {
+        float: right;
+    }
+
+    nav input {
+        visibility: visible;
+    }
+
+    nav label {
+        visibility: visible;
+    }
+
+    h1{
+        font-size: 30px;
+        margin-left: 50px;
+    }
+
+    header p{
+        margin-right: 190px;
+        margin-left: 50px;
+    }
+
+    #intro {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+    }
+
+    #intro h2 {
+        font-size: 30px;
+        margin-left: 50px;
+    }
+
+    #intro p {
+        margin-left: 50px;
+        margin-right: 100px;
+        line-height: 1.8;
+    }
+
+    #img-grid {
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 1em;
+    }
+
+    #img-grid img {
+        width: 90%;
+    }
+
+    #plan {
+    width: 30px;
+    }
+
+    h3 {
+        font-size: 25px;
+        margin-left: 100px;
+        margin-bottom: 20px;
+    }
+
+    #plan section {
+        border-radius: 5px;
+        width: 100px;
+        height: 200px;
+        margin-left: 100px;
+    }
+
+    section img {
+        display: flex
+    }
+
+
+    #plan img {
+        margin-left: 90px;
+        margin-top: 10px;
+        width: 120px;
+        align-items: center;
+    }
+
+    #plan section h4 {
+        margin-top: 30px;
+    }
+
+div q {
+        margin-right: 600px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    nav input {
+    visibility: visible;
+ }
+
+    nav label {
+    visibility: visible;
+ }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    html {
+        min-width: 768px;
+    }
+
+    header {
+    display: grid;
+    grid-template-columns: auto;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 200px;
+    }
+
+    ul li {
+        background-color: var(--white);
+    }
+
+    li {
+        text-transform: uppercase;
+        margin-left: 10px;
+        font-weight: bold;
+        padding: .5rem;
+    }
+
+    li a {
+        text-decoration: none;
+        font-size: small;
+    }
+
+    nav input {
+    visibility: hidden;
+ }
+
+    nav label {
+    visibility: hidden;
+ }
+
+
+    #img-grid picture {
+        grid-column: span 1;
+    }
+
+    
+
+
+
+}
+
+@media only screen and (max-width: 900px) {
+}
+
+@media only screen and (min-width: 1200px) {
+    header p {
+    padding-left: 210px;
+    padding-right: 600px;
+    }
+
+    h1 {
+        font-size: 50px;
+        padding-left: 210px;
+        margin-top: -95px;
+        margin-bottom: -10px
+    }
+
+    nav ul {
+        float: right;
+        margin-right: 20px;
+        margin-top: -120px;
+    }
+
+    nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 15px;
+        font-weight: bolder;
+    }
+
+    a.active,a:hover {
+        transition: 0.3s;
+    }
+
+    #intro {
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+        margin-top: 100px;
+    }
+
+    #intro h2 {
+        font-size: 30px;
+        margin-left: 100px
+    }
+
+    #intro p {
+        margin-top: 100px;
+        padding-right: 100px;
+        margin-left: -120px;
+    }
+
+    #img-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1em;
+        margin-right: 100px;
+    }
+
+    #img-grid picture {
+        grid-column: span 3;
+    }
+
+    #plan {
+        padding: 80px 0 80px 0;
+    }
+
+    h3 {
+        font-size: 25px;
+        margin-bottom: 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    #plan div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    #plan section {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        padding: 2rem;
+    }
+
+    #plan h4 {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    #plan section h4 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    #plan a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #testimonials h3 {
+        margin-top: 100px;
+    }
+
+    #testimonials div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+        margin-bottom: 100px;
+    }
+
+    #testimonials section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    #testimonials h4 {
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #testimonials p {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    #testimonials q {
+        font-style: italic;
+        text-align: center;
+    }
+
+    #testimonials section img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    #about div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
+
+    #about section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    #about section img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact {
+        margin-top: 90px;
+    }
+
+    form {
+    width: 400px;
+    display: flex;
+    margin-left: 150px;
+    }
+
+    #names {
+        margin: 20px;
+    }
+
+    #nums {
+        margin: 20px;
+    }
+
+    #fName {
+        width: 300px;
+        height: 30px;
+        margin-bottom:10px;
+        margin-top: 5px;
+    }
+
+    #lName {
+        width: 98%;
+        height: 30px;
+        margin-bottom:10px;
+        margin-top: 5px;
+    }
+
+    #email {
+        width: 310px;
+        height: 35px;
+        margin-bottom:10px;
+        margin-top: 5px;
+    }
+
+    fieldset input {
+        display: flex;
+    }
+
+    #phone {
+        width: 98%;
+        height: 30px;
+        margin-bottom:10px;
+        margin-top: 5px;
+    }
+
+    #selects {
+        appearance: none;
+        margin: 20px;
+    }
+
+    #destination {
+        width: 300px;
+        height: 50px;
+        margin-bottom:10px;
+        margin-top: 5px;
+    }
+
+    #travelTime {
+        width: 300px;
+        height: 50px;
+        margin-bottom:10px;
+        margin-top: 5px;
+    }
+}
